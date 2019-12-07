@@ -3,19 +3,13 @@ from linkedlist import Linked_List
 from node import Node
 
 
-a = Linked_List()
-a.head = Node(1)
-x = Node(2)
-y = Node(3)
+linked_list = Linked_List()
 
-a.head.next = x
-x.next = y
-b=a.travers_list()
-for i in b:
+newNode = Node(4)
+linked_list.insertFront(newNode)
+
+newNode = Node(9)
+linked_list.insertRear(newNode)
+
+for i in linked_list.travers_list():
     print(i.data)
-
-
-
-
-
-

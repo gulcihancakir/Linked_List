@@ -3,33 +3,34 @@ from node import Node
 
 class Linked_List:
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self.__head = None
+        self.__tail = None
 
     def insertRear(self, Node):
 
-        if self.head == None:
-            self.head = Node
-            self.tail = Node
+        if self.__head == None:
+            self.__head = Node
+            self.__tail = Node
 
         else:
-            self.tail.next = Node
-            self.tail = Node
+            self.__tail.next = Node
+            self.__tail = Node
 
     def insertFront(self, Node):
-        if self.head == None:
-            self.head = Node
-            self.tail = Node
+        if self.__head == None:
+            self.__head = Node
+            self.__tail = Node
 
         else:
-            Node.next = self.head
-            self.head = Node
+            Node.next = self.__head
+            self.__head = Node
 
-            return self.head, self.tail
+            return self.__head, self.__tail
+        
 
     def travers_list(self):
 
-        node = self.head
+        node = self.__head
         while node != None:
             yield node
             node = node.next
