@@ -21,7 +21,10 @@ linked_list.insert_rear(newNode)
 
 linked_list.remove_front()
 
+
+
 linked_list.remove_rear()
+print(linked_list.remove_rear())
 
 for i in linked_list.travers_list():
     print(i.data)

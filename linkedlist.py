@@ -15,14 +15,15 @@ class Linked_List:
             Node.next = self.__head
             self.__head = Node
 
-
     def remove_front(self):
-        for i in self.travers_list():
-            if self.__head != None:
-                q = self.__head
-                self.__head = q.next
-                q = None
-            return i
+
+        if self.__head != None:
+            temp = self.__head
+            q = self.__head
+            self.__head = q.next
+            q = None
+
+            return temp.data
 
     def insert_rear(self, Node):
 
@@ -34,15 +35,16 @@ class Linked_List:
             self.__tail.next = Node
             self.__tail = Node
 
-        
-
     def remove_rear(self):
         for i in self.travers_list():
             if i.next == self.__tail:
                 q = i.next
                 i.next = None
                 self.__tail = i
-                return q
+                print("remove", q.data)
+                print("tail",self.__tail.data)
+                return q.data
+                
 
     def travers_list(self):
 
