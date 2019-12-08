@@ -5,7 +5,6 @@ class Linked_List:
     def __init__(self):
         self.__head = None
         self.__tail = None
-        self.len = 0
 
     def insert_front(self, Node):
         if self.__head == None:
@@ -18,11 +17,12 @@ class Linked_List:
 
 
     def remove_front(self):
-
-        if self.__head != None:
-            q = self.__head
-            self.__head = q.next
-            q = None
+        for i in self.travers_list():
+            if self.__head != None:
+                q = self.__head
+                self.__head = q.next
+                q = None
+            return i
 
     def insert_rear(self, Node):
 
@@ -37,11 +37,12 @@ class Linked_List:
         
 
     def remove_rear(self):
-        print("tail", self.__tail.data)
         for i in self.travers_list():
             if i.next == self.__tail:
+                q = i.next
                 i.next = None
                 self.__tail = i
+                return q
 
     def travers_list(self):
 
@@ -49,4 +50,3 @@ class Linked_List:
         while node != None:
             yield node
             node = node.next
-            self.len += 1
