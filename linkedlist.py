@@ -41,8 +41,7 @@ class Linked_List:
                 q = i.next
                 i.next = None
                 self.__tail = i
-                print("remove", q.data)
-                print("tail",self.__tail.data)
+                
                 return q.data
                 
 
