@@ -29,17 +29,22 @@ linked_list = Linked_List()
 # for i in linked_list.travers_list():
 #     print(i.data)
 newNode = Node(12)
-queue=Queue()
-queue.enqueue(newNode)
-newNode = Node(9)
-queue.enqueue(newNode)
-newNode = Node(954)
-queue.enqueue(newNode)
-queue.remove_front()
-# b.remove_front()
 
-for i in queue.travers_list():
-    print(i.data)
+queue = Queue()
+queue.enqueue(newNode)
+
+
+newNode = Node(22)
+
+queue.enqueue(newNode)
+newNode = Node(242)
+
+
+queue.enqueue(newNode)
+
+
+
+
 
 newNode = Node(456)
 stack = Stack()
@@ -49,6 +54,5 @@ stack.push(newNode)
 newNode = Node(678)
 stack.push(newNode)
 stack.pop()
-for i in stack.travers_list():
-    print(i.data)
+
 

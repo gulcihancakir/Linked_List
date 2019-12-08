@@ -2,12 +2,14 @@ from linkedlist import Linked_List
 from node import Node
 
 
-class Queue(Linked_List):
+class Queue:
     def __init__(self):
-        super().__init__()
+        self.__linked_list = Linked_List()
 
     def enqueue(self, Node):
-        Linked_List.insert_rear(self, Node)
+        self.__linked_list.insert_rear(Node)
+        return Node
 
     def dequeue(self):
-        Linked_List.remove_front(self)
+        self.__linked_list.remove_front()
+        return self.__linked_list.remove_front()
