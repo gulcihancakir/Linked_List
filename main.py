@@ -55,8 +55,11 @@ linked_list.insert_rear(newNode)
 # stack.pop()
 # print(stack.pop)
 
-linked_list.insert_after(5,Node(45))
-# linked_list.insert_before(Node(15))
+# linked_list.insert_after(5,Node(45))
+# linked_list.insert_after(6,Node(55))
+# linked_list.insert_after(6,Node(15))
+
+linked_list.remove_after(6)
 
 for i in linked_list.travers_list():
     print(i.data)

@@ -44,24 +44,31 @@ class Linked_List:
 
                 return q.data
 
-    def insert_before(self, link, Node):
+    def insert_before(self, value, Node):
 
         pass
 
     def remove_before(self):
         pass
 
-    def insert_after(self, link, Node):
+    def insert_after(self, value, Node):
         for i in self.travers_list():
-            if i.data == link:
+            if i.data == value:
                 temp = i.next
 
                 Node.next = temp
                 i.next = Node
 
-    def remove_after(self, link):
+    def remove_after(self, value):
 
-        pass
+        for i in self.travers_list():
+            if i.data == value:
+                q = i.next
+                temp = i.next
+                i.next = temp.next
+                temp = None
+
+                return q.data
 
     def travers_list(self):
 
