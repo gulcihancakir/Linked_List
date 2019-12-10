@@ -45,10 +45,17 @@ class Linked_List:
                 return q.data
 
     def insert_before(self, value, Node):
+        for i in self.travers_list():
+            x = i.next
 
-        pass
+            if x.data == value:
+                temp = i.next
 
-    def remove_before(self):
+                Node.next = temp
+                i.next = Node
+                break
+
+    def remove_before(self,value):
         pass
 
     def insert_after(self, value, Node):
